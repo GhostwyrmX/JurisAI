@@ -1,0 +1,61 @@
+services:
+  - type: web
+    name: jurisai-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile.backend
+    autoDeploy: false
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: AI_SERVICE_URL
+        fromService:
+          type: web
+          name: jurisai-ai-service
+          property: hostport
+      - key: CLIENT_ORIGIN
+        sync: false
+
+  - type: web
+    name: jurisai-ai-service
+    runtime: docker
+    dockerfilePath: ./Dockerfile.ai-service
+    autoDeploy: false
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: MODEL_PROVIDER
+        value: OLLAMA_LOCAL
+      - key: OLLAMA_URL
+        sync: false
+      - key: OLLAMA_MODEL
+        value: qwen2.5:3b
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: jurisai-redis
+          property: connectionString
+      - key: EMBEDDING_MODEL
+        value: all-MiniLM-L6-v2
+      - key: VECTOR_INDEX_PATH
+        value: vector_index/ipc.index
+      - key: MAX_CONTEXT_TOKENS
+        value: 3000
+      - key: MAX_OUTPUT_TOKENS
+        value: 500
+
+  - type: keyvalue
+    name: jurisai-redis
+    ipAllowList: []
+    plan: free
