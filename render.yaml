@@ -43,7 +43,7 @@ services:
         value: qwen2.5:3b
       - key: REDIS_URL
         fromService:
-          type: redis
+          type: keyvalue
           name: jurisai-redis
           property: connectionString
       - key: EMBEDDING_MODEL

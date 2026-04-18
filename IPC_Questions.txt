@@ -1,0 +1,129 @@
+## General IPC Questions 
+
+1. What is the Indian Penal Code and when was it enacted?
+2. How many sections does the IPC currently have?
+3. Which sections of the IPC apply to cyber crimes?
+4. What are the fundamental principles of criminal liability under IPC?
+5. How does IPC define the term "person"?
+6. What is the territorial jurisdiction of IPC?
+7. Can IPC be applied to offenses committed outside India?
+8. What are the different chapters in IPC and what do they cover?
+9. How often is IPC updated or amended?
+10. What is the difference between cognizable and non-cognizable offenses?
+
+## Definitions and Legal Terms 
+
+1. What does "mens rea" mean in criminal law?
+2. What is the legal definition of "illegal" under IPC?
+3. How is "intention" defined in IPC Section 8?
+4. What constitutes "voluntary act" under IPC Section 59?
+5. What is meant by "good faith" in legal contexts?
+6. How does IPC define "injury"?
+7. What is the definition of "death" under IPC?
+8. What does "public servant" mean under IPC?
+9. How is "property" defined in IPC?
+10. What is the legal meaning of "document" under IPC?
+
+## Types of Punishments 
+
+1. What are the different types of punishments under IPC?
+2. What is the maximum punishment for murder under IPC?
+3. Can a person receive both imprisonment and fine for the same offense?
+4. What is the difference between simple and rigorous imprisonment?
+5. When can death penalty be awarded under IPC?
+6. What is solitary confinement and when is it applicable?
+7. How is the duration of imprisonment calculated under IPC?
+8. Can punishment be commuted to a lesser form?
+9. What happens if someone cannot pay a monetary fine?
+10. Are there any gender-specific differences in punishments?
+
+## Theft and Property Offenses 
+
+1. What is the difference between theft and robbery under IPC?
+2. What is the punishment for pickpocketing?
+3. How is criminal breach of trust defined?
+4. What constitutes criminal misappropriation of property?
+5. What is the punishment for shoplifting?
+6. How does IPC treat embezzlement by employees?
+7. What is the difference between theft and cheating?
+8. What constitutes house-breaking under IPC?
+9. What is the punishment for receiving stolen property?
+10. How does IPC define "movable property"?
+
+## Assault and Harm Offenses 
+
+1. What is the legal definition of assault under IPC?
+2. What is the punishment for voluntarily causing hurt?
+3. How is grievous hurt defined in IPC?
+4. What constitutes criminal force under IPC?
+5. What is the punishment for assault with intent to outrage modesty?
+6. How does IPC treat domestic violence cases?
+7. What is the difference between hurt and grievous hurt?
+8. What constitutes assault on a woman?
+9. How is acid attack treated under IPC?
+10. What is the punishment for causing death by negligence?
+
+## Sexual Offenses 
+
+1. What constitutes rape under IPC Section 376?
+2. What is the punishment for sexual harassment?
+3. How does IPC treat marital rape?
+4. What is outraging the modesty of a woman?
+5. What constitutes sexual assault on children?
+6. What is the punishment for gang rape?
+7. How does IPC address voyeurism?
+8. What is stalking under IPC and what is its punishment?
+9. How does IPC treat trafficking of persons?
+10. What constitutes unnatural offenses under IPC?
+
+## Fraud and Cheating 
+
+1. What is the legal definition of cheating under IPC?
+2. What is the punishment for cheating by personation?
+3. How does IPC treat online fraud?
+4. What constitutes criminal breach of trust?
+5. What is the punishment for cheating with knowledge of wrongful loss?
+6. How does IPC treat Ponzi schemes?
+7. What constitutes forgery under IPC?
+8. How is identity theft treated under IPC?
+9. What is the punishment for fraudulent removal of property?
+10. How does IPC address corporate fraud?
+
+## Murder and Homicide 
+
+1. What is the difference between murder and culpable homicide?
+2. What are the exceptions to murder under IPC?
+3. What is the punishment for murder under IPC?
+4. How does IPC treat honor killings?
+5. What constitutes dowry death?
+6. What is the punishment for attempt to murder?
+7. How does IPC treat infanticide?
+8. What constitutes causing death by negligence?
+9. What is the difference between suicide abetment and murder?
+10. How does IPC treat euthanasia or mercy killing?
+
+## Public Order and Security Offenses 
+
+1. What constitutes rioting under IPC?
+2. What is the punishment for unlawful assembly?
+3. How does IPC treat sedition?
+4. What constitutes promoting enmity between groups?
+5. What is the punishment for hate speech?
+6. How does IPC treat terrorism-related offenses?
+7. What constitutes criminal intimidation?
+8. What is the punishment for giving false evidence?
+9. How does IPC treat contempt of court?
+10. What constitutes obstructing a public servant?
+
+## Traffic and Motor Vehicle Offenses
+
+1. What is the punishment for rash driving causing death?
+2. How does IPC treat drunken driving?
+3. What constitutes hit and run cases?
+4. What is the punishment for dangerous driving?
+5. How does IPC treat vehicle theft?
+6. What constitutes reckless driving?
+7. What is the punishment for driving without license?
+8. How does IPC treat tampering with evidence after accident?
+9. What constitutes vehicular manslaughter?
+10. How does IPC treat road rage incidents?

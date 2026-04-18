@@ -1,0 +1,8 @@
+# Ollama Model Requirements for JURIS AI
+
+# Primary model for legal reasoning
+qwen2.5:3b
+
+# Alternative models (commented out)
+# llama2:7b
+# mistral:7b
