@@ -33,3 +33,5 @@ ai-service-python/audio/
 .qoder/
 .uv-cache/
 build-pro/
+.vercel
+.env*.local
