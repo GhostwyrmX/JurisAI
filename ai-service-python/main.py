@@ -468,6 +468,28 @@ async def get_all_ipc_sections():
         log_error(f"IPC sections lookup failed: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
+# Health check endpoint
+@app.get("/health")
+async def health_check():
+    """Health check endpoint"""
+    try:
+        # Test that we can load IPC sections
+        sections = ipc_module.get_all_sections()
+        return {
+            "status": "healthy",
+            "timestamp": time.time(),
+            "ipc_sections_count": len(sections),
+            "model_provider": Config.MODEL_PROVIDER,
+            "embedding_model": Config.EMBEDDING_MODEL
+        }
+    except Exception as e:
+        log_error(f"Health check failed: {str(e)}")
+        return {
+            "status": "unhealthy",
+            "error": str(e),
+            "timestamp": time.time()
+        }
+
 # Related sections endpoint
 @app.get("/ipc-section/{section_number}/related")
 async def get_related_sections(section_number: int):

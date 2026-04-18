@@ -69,20 +69,66 @@ let ipcSectionIndex = new Map();
 
 const loadIpcDataset = () => {
   try {
-    const datasetRaw = fs.readFileSync(datasetPath, 'utf8');
+    // Try multiple possible paths for the dataset
+    const possiblePaths = [
+      datasetPath,
+      path.join(__dirname, 'dataset', 'ipc', 'ipc.json'),
+      path.join(process.cwd(), 'dataset', 'ipc', 'ipc.json'),
+      '/app/dataset/ipc/ipc.json' // Render deployment path
+    ];
+    
+    let datasetRaw = null;
+    let loadedPath = null;
+    
+    for (const possiblePath of possiblePaths) {
+      try {
+        if (fs.existsSync(possiblePath)) {
+          datasetRaw = fs.readFileSync(possiblePath, 'utf8');
+          loadedPath = possiblePath;
+          break;
+        }
+      } catch (e) {
+        // Continue to next path
+      }
+    }
+    
+    if (!datasetRaw) {
+      throw new Error('Could not find IPC dataset file in any expected location');
+    }
+    
     ipcSections = JSON.parse(datasetRaw);
     ipcSectionIndex = new Map(
       ipcSections.map((section) => [String(section.section_number), section])
     );
-    console.log(`Loaded ${ipcSections.length} IPC sections from dataset`);
+    console.log(`Loaded ${ipcSections.length} IPC sections from dataset at ${loadedPath}`);
   } catch (error) {
     console.error('Failed to load IPC dataset in backend:', error.message);
+    console.error('Current working directory:', process.cwd());
+    console.error('Dataset path attempted:', datasetPath);
     ipcSections = [];
     ipcSectionIndex = new Map();
   }
 };
 
 loadIpcDataset();
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  const healthStatus = {
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    ipcSectionsLoaded: ipcSections.length,
+    aiServiceUrl: process.env.AI_SERVICE_URL || 'http://localhost:8000',
+    environment: process.env.NODE_ENV || 'development'
+  };
+  
+  if (ipcSections.length === 0) {
+    healthStatus.status = 'warning';
+    healthStatus.message = 'IPC sections not loaded properly';
+  }
+  
+  res.json(healthStatus);
+});
 
 // Serve static audio files
 const audioPath = path.join(__dirname, '../ai-service-python/audio');
